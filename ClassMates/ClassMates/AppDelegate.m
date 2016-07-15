@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Store.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,4 +25,12 @@
 {
     [[Store shared]save];
 }
+
+-(void)applicationDidBecomeActive:(UIApplication *)application
+{
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    ViewController *viewController = (ViewController *)navigationController.topViewController;
+    [viewController updateStudents];
+}
+
 @end

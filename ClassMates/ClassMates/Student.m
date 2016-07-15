@@ -8,6 +8,10 @@
 
 #import "Student.h"
 
+@interface Student () <NSCoding>
+
+@end
+
 @implementation Student
 
 - (instancetype)initWithFirstName:(NSString *)firstName

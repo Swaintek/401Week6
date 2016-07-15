@@ -18,6 +18,8 @@
 		8563C2391D36F1EB007819B1 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8563C2381D36F1EB007819B1 /* NSString+Extension.m */; };
 		8563C23F1D36F9A0007819B1 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8563C23E1D36F9A0007819B1 /* AddViewController.m */; };
 		8563C2421D3700B4007819B1 /* Student+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8563C2411D3700B4007819B1 /* Student+Extension.m */; };
+		856F15831D37F4270019E3C3 /* CloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 856F15821D37F4270019E3C3 /* CloudService.m */; };
+		856F15851D3966660019E3C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856F15841D3966660019E3C3 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		8563C23E1D36F9A0007819B1 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddViewController.m; path = ../AddViewController.m; sourceTree = "<group>"; };
 		8563C2401D3700B4007819B1 /* Student+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+Extension.h"; sourceTree = "<group>"; };
 		8563C2411D3700B4007819B1 /* Student+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+Extension.m"; sourceTree = "<group>"; };
+		856F15811D37F4270019E3C3 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		856F15821D37F4270019E3C3 /* CloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudService.m; sourceTree = "<group>"; };
+		856F15841D3966660019E3C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856F15851D3966660019E3C3 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				8563C2121D36DF84007819B1 /* ClassMates */,
-				8563C2361D36F1AC007819B1 /* Extension */,
 				8563C22B1D36DFE6007819B1 /* View Controller */,
+				8563C2361D36F1AC007819B1 /* Extension */,
 				8563C2111D36DF84007819B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +92,7 @@
 		8563C2131D36DF84007819B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				856F15841D3966660019E3C3 /* CloudKit.framework */,
 				8563C2141D36DF84007819B1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -105,10 +112,10 @@
 		8563C22B1D36DFE6007819B1 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8563C2191D36DF84007819B1 /* ViewController.h */,
-				8563C21A1D36DF84007819B1 /* ViewController.m */,
 				8563C23D1D36F9A0007819B1 /* AddViewController.h */,
 				8563C23E1D36F9A0007819B1 /* AddViewController.m */,
+				8563C2191D36DF84007819B1 /* ViewController.h */,
+				8563C21A1D36DF84007819B1 /* ViewController.m */,
 			);
 			name = "View Controller";
 			path = ClassMates;
@@ -136,6 +143,8 @@
 		8563C2341D36E7FC007819B1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				856F15811D37F4270019E3C3 /* CloudService.h */,
+				856F15821D37F4270019E3C3 /* CloudService.m */,
 				8563C2311D36E7F5007819B1 /* Store.h */,
 				8563C2321D36E7F5007819B1 /* Store.m */,
 			);
@@ -185,7 +194,7 @@
 				TargetAttributes = {
 					8563C20F1D36DF84007819B1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = AYYXSD8MX4;
+						DevelopmentTeam = Q6US9WZLNC;
 					};
 				};
 			};
@@ -227,6 +236,7 @@
 			files = (
 				8563C21B1D36DF84007819B1 /* ViewController.m in Sources */,
 				8563C2391D36F1EB007819B1 /* NSString+Extension.m in Sources */,
+				856F15831D37F4270019E3C3 /* CloudService.m in Sources */,
 				8563C2181D36DF84007819B1 /* AppDelegate.m in Sources */,
 				8563C23F1D36F9A0007819B1 /* AddViewController.m in Sources */,
 				8563C2151D36DF84007819B1 /* main.m in Sources */,
@@ -347,10 +357,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ClassMates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = spaceoutlaw.ClassMates;
+				PRODUCT_BUNDLE_IDENTIFIER = davidswaintek.ClassMates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,10 +371,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ClassMates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = spaceoutlaw.ClassMates;
+				PRODUCT_BUNDLE_IDENTIFIER = davidswaintek.ClassMates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
